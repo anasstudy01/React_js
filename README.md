@@ -27,3 +27,11 @@ js:hoocks : specific use case  ony use in react
 ## states in react ?
 
 eventlistener in react = <button onClick ={()=>{x+=10; console.log(x)}}>click me!</button>
+
+## short cirtuiting  in react
+short circuiting in react is a way to prevent unnecessary computations or re-renders of a component
+{label && <span className="text-grey-700">{label}</span>}
+T&&F =F // if first side is true it return second side
+F&&T= F
+T&&T=T   // it only return true if both are true
+F&&F=F

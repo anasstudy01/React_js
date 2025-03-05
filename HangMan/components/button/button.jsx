@@ -4,7 +4,7 @@ function CreateButton({ text, buttonType ,styletype}) {
   return (
     <button
       type={buttonType}
-      className={`mx-3 ${getButtonStyling(styletype)}`}
+      className={` h-10 my-8 ${getButtonStyling(styletype)}`}
     >
       {text}
     </button>
