@@ -1,9 +1,9 @@
-
-function App(){
+import CreateButton from "./button";
+function App() {
   return (
-    <div>
-      <h1 className="font-semibold text-4xl">Hello react developers</h1>
-    </div>
-  )
+ <div><h1 className ="text-3xl">welcome to hangman</h1>
+
+ </div>
+  );
 }
- export default App;
+export default App;

@@ -1,19 +1,11 @@
+import CustomComponent from "./CustomComponet";
 
-import CustomComponent from "./CustomComponet"
-
-
-
-function App(){
-
-return (
-  <div>
-    <h1>Hello react Developer</h1>
-    <CustomComponent/>
-    <CustomComponent/>
-    <CustomComponent/>
-    <CustomComponent/>
-  </div>
-)
-
+function App() {
+  return (
+    <div>
+      <h2 className="m-3">hellow react developers</h2>
+      <CustomComponent />{" "}
+    </div>
+  );
 }
 export default App;

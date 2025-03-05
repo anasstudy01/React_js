@@ -1,6 +1,16 @@
-function CustomComponent(){
-    return <div>THIS IS A DIV WHICH HELPS TO REPEAT THE TASK </div>;
-    
-}
+import {useState} from "react";
 
-export default CustomComponent;
+
+function CustomComponent() {
+let [x,setX] =useState(10);
+
+return <>
+<button onClick ={()=>{setX(x+10);  console.log(x)}}>click me!</button>
+
+{x}
+
+</>
+
+}
+  
+  export default CustomComponent;
