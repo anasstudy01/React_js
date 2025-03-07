@@ -35,3 +35,7 @@ T&&F =F // if first side is true it return second side
 F&&T= F
 T&&T=T   // it only return true if both are true
 F&&F=F
+
+
+
+
