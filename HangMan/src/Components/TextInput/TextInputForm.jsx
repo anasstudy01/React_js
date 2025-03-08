@@ -5,12 +5,17 @@ import { useState } from "react";
 function TextInputForm({onSubmit}  ) {
 
 let [value,setValue]=useState("");
+const [inputType, setInputType] = useState("password");
 
   function handleFormSubmit(e) {
     e.preventDefault();
     console.log("form submitted");
     console.log(value);
     onSubmit?.(value);
+  }
+
+  function handleShowButtonClick() {
+    setInputType(inputType === "password" ? "text" : "password");
   }
 
 
@@ -32,7 +37,7 @@ function handleTextInputChange(e) {
 
         <TextInput 
         label="enter your name"
-         type="password"
+         type={inputType}
          onChange={handleTextInputChange}
           />
 
@@ -41,7 +46,7 @@ function handleTextInputChange(e) {
 
       <div className="">
         <Button text="Submit" btnStyle="sucess" />
-        <Button text="show" btnStyle="secondary" />
+        <Button text={inputType==="password"? "show":"hide"} btnStyle="secondary" onClickHandler={handleShowButtonClick} />
       </div>
     </form>
   );
