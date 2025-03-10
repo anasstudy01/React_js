@@ -1,6 +1,7 @@
 import  Button  from "./Components/Button/Button";
 import TextInput from "./Components/TextInput/TextInput";
-import TextInputForm from  "./Components/TextInput/TextInputForm"
+import TextInputForm from  "./Components/TextInput/TextInputForm";
+import TextInputFormContainer from "./Components/TextInput/TextInputFormContainer";
 
 function App() {
   return (
@@ -10,7 +11,7 @@ function App() {
           Welcome to Hangman
         </h1>
       </center>
-      <TextInputForm  onSubmit={(value)=>{console.log(`the submiteed value is ${value}`)}}/>
+      <TextInputFormContainer  onSubmit={(value)=>{console.log(`the submiteed value is ${value}`)}}/>
     </div>
   );
 }
