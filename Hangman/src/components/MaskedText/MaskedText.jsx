@@ -1,11 +1,24 @@
+import {getAllCharacters} from './MaskedTextUtility';
+
+
+
+
 function MaskedText({text,usedLetters}){
+
+    const letters =getAllCharacters(text,usedLetters).split('');
 
 return(
     <>
 
+{/* <div>{letters}</div> */}
+<div>
+    
 
+ {letters.map((letter,index)=>(
+     <span key={index} className="text-2xl font-semibold text-center w-100 mt-15 bg-green-200 rounded-xl ">{letter}</span>
+    ))}
 
-
+</div>
 
         
     </>
@@ -17,18 +30,9 @@ return(
 
 
 
-export function getAllCharacters(word,usedLetters){
-    usedLetters = usedLetters.map(letter=>letter.toUpperCase())
 
-    const guessedLetters =new Set(usedLetters); 
-    const characters = word.toUpperCase().split('').map(char=>{
-        if(guessedLetters.has(char)){
-            return char;
-        }
-        return '_';
-    })
-    return characters.join(' ');
    
 
-}
+
 export default  MaskedText;
+
