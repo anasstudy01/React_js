@@ -7,12 +7,15 @@ const Alphabet = new Array(26).fill("").map((e, index) => String.fromCharCode(65
 
 
 
-function LetterButtons({usedLetters,onLetterClick}) {
+function LetterButtons({text,usedLetters,onLetterClick}) {
 
 const selectedLetters = new Set(usedLetters.join('').toUpperCase());
+const orignalCharacters= new Set(text.toUpperCase().split(''));
+
+
 const buttonStyle = function(letter){
     if(selectedLetters.has(letter)){
-        return "bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded";
+        return `bg-green-500 ${orignalCharacters.has(letter)?'bg-green-200':'bg-red-500 hover:bg-red-700'} hover:bg-green-700 text-white font-bold py-2 px-4 rounded`;
     } else {
         return "bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded";
     }

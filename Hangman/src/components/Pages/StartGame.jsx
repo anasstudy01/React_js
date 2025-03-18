@@ -6,10 +6,8 @@ export default function StartGame() {
     const navigate = useNavigate();
   const handleSubmit =(value)=>{
     console.log("Value coming from the hidden form is", value)
-    if(value===''){
-      alert("Please enter a word or phrase")
-    }else {
-      navigate('/play')}
+    navigate('/play',{state:{wordSelected:value}});
+
   }
   
   
