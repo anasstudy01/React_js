@@ -58,17 +58,19 @@ const randomAdd =()=>{
     </ChildPropDemo>  
 
 {/*------------------------------- Masking Text------------------------------------------- */}
+<div  className='masking bg-gray-300 text-black p-4 rounded-md'>
 
-<ul className=' m-5'>
+<ul className=' m-5 p-5 gap-5 bg-gray-200 mx-20 rounded-xl flex' >
   {arr.map((item,index) =><li key={index}>{item}</li>)}
 
 </ul>
 
 
-    <button className='hover:bg-gray-600 hover:scale-105 transition-all duration-200 ease-in-out px-4 py-2 m-2 bg-black text-white rounded-xl' onClick={sortArr}>sortarray</button>
+    <button className='hover:bg-gray-600 hover:scale-105 transition-all duration-200 ease-in-out px-4 py-2 m-2 bg-black text-white rounded-xl ml-150' onClick={sortArr}>sortarray</button>
     <button className='hover:bg-gray-600 hover:scale-105 transition-all duration-200 ease-in-out px-4 py-2 m-2 bg-black text-white rounded-xl' onClick={randomAdd}>add random number</button>
 
 
+</div>
 
     </>
   )

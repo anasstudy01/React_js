@@ -9,7 +9,7 @@ export default function PlayGame() {
   const [usedLetters, setUsedLetters] = useState([]);
   const location = useLocation();
   const wordSelected = location.state?.wordSelected; // optional chaining operator
-  const [step, setStep] = useState(1);
+  const [step, setStep] = useState(0);
 
   const handleLetterClick = (letter) => {
     if (wordSelected.toUpperCase().includes(letter.toUpperCase())) {
