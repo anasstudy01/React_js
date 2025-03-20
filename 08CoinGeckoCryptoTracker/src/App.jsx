@@ -1,8 +1,8 @@
 
 import './App.css'
-import Banner from './componets/banner/Banner'
-import CoinTable from './componets/CoinTable'
 import Navbar from './componets/navbar/Navbar'
+import Banner from './componets/banner/Banner'
+import CoinTable from './componets/CoinTable/CoinTable'
 
 
 function App() {

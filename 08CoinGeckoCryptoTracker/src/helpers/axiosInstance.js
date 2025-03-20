@@ -1,9 +1,8 @@
-import axios from "axios";
-import { CoinGecko_api } from "./constant";
-
+import axios from 'axios';
+import { COINGECKO_API_URL } from './constants';
 
 const axiosInstance = axios.create({
-    baseURL:CoinGecko_api,
-})
+    baseURL: COINGECKO_API_URL,
+});
 
 export default axiosInstance;
