@@ -15,6 +15,7 @@ function App() {
       <Navbar/>
 <Banner/>
       <CoinTable/>
+      
     </div>
    
     </>
