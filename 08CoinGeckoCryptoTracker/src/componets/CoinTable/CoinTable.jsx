@@ -1,10 +1,12 @@
 import { fetchCoinData } from "../../services/FetchCoinData";
 import { useQuery } from "@tanstack/react-query";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { CurrencyContext } from "../../context/CurrencyContext";
 
 
-function CoinTable({ currency }) {
+function CoinTable() {
+    const {currency}=useContext(CurrencyContext);
   const [page, setPage] = useState(1);
   const navigate = useNavigate();
 
@@ -41,16 +43,16 @@ function CoinTable({ currency }) {
       <div className="my-5 flex flex-col items-center justify-center gap-5 w-[90vw] mx-auto">
             <div className="w-full bg-yellow-400 text-black flex py-4 px-2 font-semibold items-center justify-center ">
                 {/* Header of the table */}
-                <div className="basis-[30%] text-2xl md:text-3xl lg:text-4xl">
+                <div className="basis-[30%] text-2xl md:text-3xl lg:text-3xl">
                     Coin 
                 </div>
-                <div  className="basis-[25%] text-2xl md:text-3xl lg:text-4xl">
+                <div  className="basis-[25%] text-2xl md:text-3xl lg:text-3xl">
                     Price {currency.toUpperCase()}
                 </div>
-                <div  className="basis-[20%] text-2xl md:text-3xl lg:text-4xl">
+                <div  className="basis-[20%] text-2xl md:text-3xl lg:text-3xl">
                     24h change 
                 </div>
-                <div  className="basis-[20%] text-2xl md:text-3xl lg:text-4xl">
+                <div  className="basis-[20%] text-2xl md:text-3xl lg:text-3xl">
                     Market Cap
                 </div>
             </div>

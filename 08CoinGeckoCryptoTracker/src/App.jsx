@@ -3,16 +3,16 @@ import Navbar from "./componets/navbar/Navbar";
 import Banner from "./componets/banner/Banner";
 import CoinTable from "./componets/CoinTable/CoinTable";
 import { useState } from "react";
-
+import Home from "./pages/Home";
+import { CurrencyContext } from "./context/CurrencyContext";
 function App() {
   const [currency, setCurrency] = useState("usd");  
   return (
     <>
-      <div className="text-3xl text-white text-center rounded-md ">
-        <Navbar setCurrency={setCurrency}/>
-        <Banner />
-        <CoinTable currency={currency}/>
-      </div>
+    <CurrencyContext.Provider value={{ currency, setCurrency }}>
+    <Home />
+    </CurrencyContext.Provider>
+
     </>
   );
 }
