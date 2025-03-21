@@ -1,4 +1,4 @@
-import BannerImage from '../banner/banner1.jpeg';
+import BannerImage from '../../componets/banner/banner1.jpeg'
 
 
 function Banner() {
