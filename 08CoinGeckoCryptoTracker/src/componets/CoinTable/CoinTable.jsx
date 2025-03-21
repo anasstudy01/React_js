@@ -4,26 +4,27 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 
-function CoinTable() {
+function CoinTable({ currency }) {
   const [page, setPage] = useState(1);
   const navigate = useNavigate();
- 
 
   const { data, isLoading, isError, error, isFetching } = useQuery({
-    queryKey: ["coins", page],
-    queryFn: () => fetchCoinData(page, "usd"),
+    queryKey: ["coins", page, currency], // Include currency in queryKey
+    queryFn: () => fetchCoinData(page, currency), // Fetch data based on currency
     // retry: 2,
     // retryDelay: 1000,
-    cacheTime: 1000 * 60 * 2,
+    // cacheTime: 1000 * 60 * 2,
+    // staleTime: 1000 * 60 * 2,
   });
 
   useEffect(() => {
-    console.log("Data Fetched", data);
-  }, [data]);
+    console.log("Currency changed to:", currency);
+    console.log("Data Fetched:", data);
+  }, [currency, data]); // Add currency to the dependency array
 
   function handleCoinRedirect(id) {
     navigate(`/details/${id}`);
-}
+  }
 
   if (isLoading) {
     return <div>Loading...</div>;
@@ -44,7 +45,7 @@ function CoinTable() {
                     Coin 
                 </div>
                 <div  className="basis-[25%]">
-                    Price 
+                    Price {currency.toUpperCase()}
                 </div>
                 <div  className="basis-[20%]">
                     24h change 

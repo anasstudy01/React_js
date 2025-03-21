@@ -1,4 +1,4 @@
-function Navbar() {
+function Navbar({ setCurrency }) {
   return (
     <div className="navbar bg-base-100 shadow-sm">
       <div className="navbar-start">
@@ -24,20 +24,20 @@ function Navbar() {
             tabIndex={0}
             className="menu menu-lg dropdown-content bg-base-300 rounded-box z-1 mt-3 w-42 p-2  shadow"
           >
-            <li>
-              <a>inr</a>
+            <li onClick={() => setCurrency("inr")}>
+              <a>INR</a>
             </li>
-            <li>
-              <a>usd</a>
+            <li onClick={() => setCurrency("usd")}>
+              <a>USD</a>
             </li>
-            <li>
+            <li onClick={() => setCurrency("pkr")}>
               <a>pkr</a>
             </li>
           </ul>
         </div>
       </div>
       <div className="navbar-center">
-        <a className="btn btn-ghost text-4xl">Crypto  Tracker</a>
+        <a className="btn btn-ghost text-4xl">Crypto  Tracker{}</a>
       </div>
       <div className="navbar-end">
         <button className="btn btn-ghost btn-circle">
