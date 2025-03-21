@@ -41,16 +41,16 @@ function CoinTable({ currency }) {
       <div className="my-5 flex flex-col items-center justify-center gap-5 w-[90vw] mx-auto">
             <div className="w-full bg-yellow-400 text-black flex py-4 px-2 font-semibold items-center justify-center ">
                 {/* Header of the table */}
-                <div className="basis-[30%]">
+                <div className="basis-[30%] text-2xl md:text-3xl lg:text-4xl">
                     Coin 
                 </div>
-                <div  className="basis-[25%]">
+                <div  className="basis-[25%] text-2xl md:text-3xl lg:text-4xl">
                     Price {currency.toUpperCase()}
                 </div>
-                <div  className="basis-[20%]">
+                <div  className="basis-[20%] text-2xl md:text-3xl lg:text-4xl">
                     24h change 
                 </div>
-                <div  className="basis-[20%]">
+                <div  className="basis-[20%] text-2xl md:text-3xl lg:text-4xl">
                     Market Cap
                 </div>
             </div>
