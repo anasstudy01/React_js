@@ -29,13 +29,13 @@ function CoinTable() {
   }
 
   if (isLoading) {
-    return <div>Loading...</div>;
+    return <div className=" text-6xl flex justify-center align-center">Loading...</div>;
   }
   if (isError) {
     return <div>{error.message}</div>;
   }
   if (isFetching) {
-    return <div>Fetching...</div>;
+    return <div className=" text-6xl flex justify-center align-center">Fetching...</div>;
   }
 
   return (
@@ -61,7 +61,7 @@ function CoinTable() {
                 {isLoading && <div>Loading...</div>}
                 {data && data.map((coin) => {
                     return (
-                        <div onClick={() => handleCoinRedirect(coin.id)} key={coin.id} className="w-full bg-transparent text-white flex py-4 px-2 font-semibold items-center justify-between cursor-pointershadow-2xl rounded-2xl hover:scale-102  transition-transform">
+                        <div onClick={() => handleCoinRedirect(coin.id)} key={coin.id} className="w-full bg-transparent text-white hover:cursor-pointer flex py-4 px-2 font-semibold items-center justify-between cursor-pointershadow-2xl rounded-2xl hover:scale-102  transition-transform">
                             <div className="flex items-center justify-start gap-3 basis-[35%] cursor-pointer">
 
                                 <div className="w-[5rem] h-[5rem]">
