@@ -13,10 +13,10 @@ function CoinTable() {
   const { data, isLoading, isError, error, isFetching } = useQuery({
     queryKey: ["coins", page, currency], // Include currency in queryKey
     queryFn: () => fetchCoinData(page, currency), // Fetch data based on currency
-    // retry: 2,
-    // retryDelay: 1000,
-    // cacheTime: 1000 * 60 * 2,
-    // staleTime: 1000 * 60 * 2,
+    retry: 2,
+    retryDelay: 1000,
+    cacheTime: 1000 * 60 * 2,
+    staleTime: 1000 * 60 * 2,
   });
 
   useEffect(() => {
