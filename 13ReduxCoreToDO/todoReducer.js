@@ -1,8 +1,8 @@
-const initialState = {
-  todos: [],
-};
 
-export default function todoReducer(state = initialState, action) {
+ 
+
+
+export default function todoReducer(state = {todos: []}, action) {
   if (action.type === "ADD_TODO") {
     return {
       ...state,

@@ -1,10 +1,11 @@
-const initialState = {
-    users: []
-    };
+import { ADD_USER } from "./constant.js";
 
 
-    const userReducer = (state = initialState, action) => {
-        if(action.type=== "ADD_USER"){
+
+
+
+    export default function userReducer (state =  {users: []}, action) {
+        if(action.type=== ADD_USER){
             return {
                 ...state,
                 users: [...state.users, action.payload]
