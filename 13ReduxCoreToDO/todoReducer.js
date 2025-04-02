@@ -8,8 +8,8 @@ const initialstate={
 
 
 
-export function numberReducer(state=initialstate,action){
-if(action.type===add){
+export default function numberReducer(state=initialstate,action){
+if(action.type=== add){
   return {
     ...state,
     todos:[...state.todos,{id:Date.now(),text:action.payload,completed:false}]

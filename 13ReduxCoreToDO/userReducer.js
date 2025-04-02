@@ -6,7 +6,7 @@ const initialstate={
 };
 
 
-export function userReducer(state=initialstate,action){
+ function userReducer(state=initialstate,action){
 
 if(action.type ===add_user){
 
@@ -21,6 +21,6 @@ else {
 }
 
 
-
-
 }
+
+export default userReducer;
