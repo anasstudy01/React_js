@@ -1,9 +1,13 @@
+import { add,remove,toggle } from "./constant.js";
 
- 
+const initialstate = {
+  todos: [],
+};
+
+export default function TodoReducer(state = initialstate, action) {
 
 
-export default function todoReducer(state = {todos: []}, action) {
-  if (action.type === "ADD_TODO") {
+  if (action.type === add) {
     return {
       ...state,
       todos: [
@@ -13,21 +17,23 @@ export default function todoReducer(state = {todos: []}, action) {
     };
   }
 
-  else if (action.type === "REMOVE_TODO") {
+
+
+  if (action.type === remove) {
     return {
       ...state,
       todos: state.todos.filter((todo) => todo.id !== action.payload),
     };
-  }
-  else if (action.type === "TOGGLE_TODO") {
+  } else if (action.type === toggle) {
     return {
       ...state,
       todos: state.todos.map((todo) =>
-        todo.id === action.payload ? { ...todo, completed: !todo.completed } : todo
+        todo.id === action.payload
+          ? { ...todo, completed: !todo.completed }
+          : todo
       ),
     };
+  } else {
+    return state;
   }
-    else {
-        return state;
-    }
 }
