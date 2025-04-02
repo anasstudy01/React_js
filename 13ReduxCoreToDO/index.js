@@ -1,5 +1,20 @@
- import store from "./store.js";
-store.dispatch({  type: "add",payload: "Learn Redux",});
-store.dispatch({ type: "add", payload: "Learn React" });
-store.dispatch({ type: "add", payload: "Learn JavaScript" });
-store.dispatch({ type: "remove", payload:store.getState().todos[0].id });
+import { addNumber, RemoveNumber,addUser } from "./actionFn.js";
+import store from "./store.js";
+
+
+console.log(store.getState())
+
+// store.dispatch(addNumber("Learn Redux"));
+// store.dispatch(addNumber("Learn React"));
+// store.dispatch(addNumber("Learn JavaScript"));
+
+// // removing
+
+
+// store.dispatch(RemoveNumber(store.getState().todos[1].id));
+
+
+//adding user 
+store.dispatch(addUser("anas"));
+store.dispatch(addUser("ahmed"));
+store.dispatch(addUser("ali"));

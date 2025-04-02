@@ -1,15 +1,19 @@
-import { createStore } from "redux";
-import TodoReducer from "./todoReducer.js";
-import { add } from "./constant.js";
+import { combineReducers, createStore } from "redux";
+import { numberReducer } from "./todoReducer.js";
+import { userReducer } from "./userReducer.js";
+
+
+const root =combineReducers({
+    todState:numberReducer,
+    userState:userReducer,
+})
 
 
 
- 
- const  store = createStore(TodoReducer);
+const store = createStore(root);
 
-store.subscribe(() => {
-  console.log(store.getState());
-});
-
+store.subscribe(()=>{console.log(store.getState())});
 
 export default store;
+
+
