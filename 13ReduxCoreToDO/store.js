@@ -1,6 +1,6 @@
 import { combineReducers, createStore } from "redux";
 import  numberReducer  from "./todoReducer.js";
-import  userReducer  from "./userReducer.js";
+import { userReducer } from "./userReducer.js";
 
 
 const root =combineReducers({
