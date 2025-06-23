@@ -10,14 +10,14 @@ function App() {
   return (
  
     <>
-    {/* <div>
+    <div>
       <TextinputFormContainer onSubmit={(value) => console.log("Value coming from the hidden form is", value)} />
     </div>
-    */}
+   
  <div className='navbar w-full h-15 bg-blue-200 '>
       <h1 className='text-3xl font-semibold text-center   rounded-xl ' >Hangman Game</h1>
  </div>
-{/* <ChildrenPropDemo>
+<ChildrenPropDemo>
 
 <div className='border-2 border-black p-4'>
     <h1 className='text-3xl font-semibold'>Additional Child Demo</h1>
@@ -28,7 +28,7 @@ function App() {
 
 
 
-</ChildrenPropDemo> */}
+</ChildrenPropDemo>
 
 
     <Routes>
