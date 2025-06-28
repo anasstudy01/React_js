@@ -13,7 +13,8 @@ function App() {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!value) return;
-    setDataArray([...dataArray, value]); // <-- update state
+    setDataArray(
+      [...dataArray, value]); // <-- update state
     setValue("");
     inputRef.current.focus(); // Focus the input after adding an item
 
