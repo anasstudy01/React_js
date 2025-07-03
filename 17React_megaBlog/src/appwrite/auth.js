@@ -44,9 +44,12 @@ export class AuthService {
     try {
       return await this.account.get();
     } catch (error) {
-      console.error("AuthService :: getCurrentUser :: error", error);
       // Return null if user is not authenticated instead of throwing error
-      
+      // This is expected behavior when user is not logged in
+      if (error.code === 401) {
+        return null;
+      }
+      console.error("AuthService :: getCurrentUser :: error", error);
     }
     return null;
   }
